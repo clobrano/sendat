@@ -71,6 +71,9 @@ func main() {
 			if strings.Contains(string(buf[:n]), *expect) {
 				r <- ""
 			}
+			if strings.Contains(string(buf[:n]), "ERROR") {
+				r <- ""
+			}
 		}
 	}()
 
