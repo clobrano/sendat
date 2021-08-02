@@ -57,7 +57,7 @@ func main() {
 	r := make(chan string)
 	go func() {
 		for {
-			buf := make([]byte, 256)
+			buf := make([]byte, 128)
 			n, err := port.Read(buf)
 			if err != nil {
 				fmt.Println(err)
